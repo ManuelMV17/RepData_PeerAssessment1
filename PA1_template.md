@@ -116,7 +116,7 @@ actividad.diaria.media <- aggregate(actividad$steps, by = list(actividad$interva
 
 names(actividad.diaria.media) <- c("interval", "mean")
 
-plot(actividad.diaria.media$interval, actividad.diaria.media$mean, type = "l", xlab = "Intevral", ylab = "Average number of steps", main = "Average number of steps per interval")
+plot(actividad.diaria.media$interval, actividad.diaria.media$mean, type = "l", xlab = "Interval", ylab = "Average number of steps", main = "Average number of steps per interval")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
@@ -169,7 +169,7 @@ names(pasos.limpios.totales) <- c("date", "daily.steps")
 
 
 ```r
-hist(pasos.limpios.totales$daily.steps, col = "purple", xlab = "Total stpes per day", ylim = c(0, 30), main = "Total number of steps taken each day", breaks = seq(0, 25000, by = 2500))
+hist(pasos.limpios.totales$daily.steps, col = "purple", xlab = "Total steps per day", ylim = c(0, 30), main = "Total number of steps taken each day", breaks = seq(0, 25000, by = 2500))
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->

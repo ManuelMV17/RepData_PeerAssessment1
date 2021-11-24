@@ -84,7 +84,7 @@ actividad.diaria.media <- aggregate(actividad$steps, by = list(actividad$interva
 
 names(actividad.diaria.media) <- c("interval", "mean")
 
-plot(actividad.diaria.media$interval, actividad.diaria.media$mean, type = "l", xlab = "Intevral", ylab = "Average number of steps", main = "Average number of steps per interval")
+plot(actividad.diaria.media$interval, actividad.diaria.media$mean, type = "l", xlab = "Interval", ylab = "Average number of steps", main = "Average number of steps per interval")
 ```
 
 2. 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps.
@@ -122,7 +122,7 @@ names(pasos.limpios.totales) <- c("date", "daily.steps")
 4. Make a histogram of the total number of steps taken each day, calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 ```{r}
-hist(pasos.limpios.totales$daily.steps, col = "purple", xlab = "Total stpes per day", ylim = c(0, 30), main = "Total number of steps taken each day", breaks = seq(0, 25000, by = 2500))
+hist(pasos.limpios.totales$daily.steps, col = "purple", xlab = "Total steps per day", ylim = c(0, 30), main = "Total number of steps taken each day", breaks = seq(0, 25000, by = 2500))
 ```
 
 Mean of the total number of steps taken per day.
