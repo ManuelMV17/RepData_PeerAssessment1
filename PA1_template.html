@@ -178,11 +178,11 @@ pre code {
 <p>The data can be downloaded here <a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip">Activity monitoring data.</a></p>
 <p>The variables included in this dataset are:</p>
 <ul>
-<li><p><strong>steps:</strong> Number of steps taking in a 5-minute interval (missing values are coded as NA).</p></li>
+<li><p><strong>steps:</strong> Number of steps taking in a 5-minute interval (missing values are coded as <em>NA</em>).</p></li>
 <li><p><strong>date:</strong> The date on which the measurement was taken in <em>YYYY-MM-DD</em> format.</p></li>
 <li><p><strong>interval:</strong> Identifier for the 5-minute interval in which measurement was taken.</p></li>
 </ul>
-<p>The dataset is stored in a comma separated value (CSV) file and there are a total of 17,568 observations.</p>
+<p>The dataset is stored in a comma separated value (<em>CSV</em>) file and there are a total of 17,568 observations.</p>
 <pre class="r"><code>library(curl)</code></pre>
 <pre><code>## Using libcurl 7.64.1 with Schannel</code></pre>
 <pre class="r"><code>## DOWNLOAD THE DATA SET
@@ -202,7 +202,7 @@ if (!file.exists(&quot;repdata_data_activity&quot;)) {
 <pre class="r"><code>library(ggplot2)
 actividad &lt;- read.csv(&quot;repdata_data_activity/activity.csv&quot;)
 
-actividad$date &lt;- as.Date(actividad$date)
+actividad$date &lt;- as.Date.factor(actividad$date)
 
 diaSemana &lt;- weekdays(actividad$date)
 actividad &lt;- cbind(actividad, diaSemana)
